@@ -94,6 +94,7 @@
     <string name="pinlenght">Enter Valid Pin</string>
     <string name="reset_pin_message">Reset Pin has benn send to your Email Address</string>
     <string name="reset_pin">Reset Pin</string>
+
     <string name="plate">Plate #</string>
     <string name="year">Year</string>
     <string name="fl">FL</string>
@@ -109,5 +110,19 @@
     <string name="no">No.</string>
     <string name="credit_card">Credit Card</string>
     <string name="card_list">Credit Card List</string>
+
+    <string name="welcome_to_our_app">Welcome to our app!</string>
+    <string name="add_credits">Add Credits</string>
+    <string name="account_overview">Account\nOverview</string>
+    <string name="vehicles">Vehicles</string>
+    <string name="payment_options">Payment\nOptions</string>
+    <string name="user_info">User Info</string>
+    <string name="transponders">Transponders</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="Account_Overview">Account Overview</string>
+    <string name="Home">Home</string>
+    <string name="payment_history">Payment History</string>
+    <string name="user_profile">User Profile</string>
+
 
 </resources>
