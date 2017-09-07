@@ -4,7 +4,7 @@
     android:id="@+id/header_layout"
     android:layout_width="fill_parent"
     android:layout_height="@dimen/x50"
-    android:background="@color/red">
+    android:background="@color/headerColor">
 
 
     <ImageView
@@ -40,5 +40,37 @@
         android:layout_marginRight="@dimen/x10"
         android:src="@drawable/ic_launcher"
         android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rl_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/x10"
+        android:visibility="gone">
+
+    <com.ingic.ezgoreload.ui.views.AnyTextView
+        android:id="@+id/txt_balanceTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Template"
+        android:textColor="@color/green"
+        android:textSize="@dimen/x16"
+        app:typeface="OpenSans-Regular.ttf" />
+
+    <com.ingic.ezgoreload.ui.views.AnyTextView
+        android:id="@+id/txt_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Balance"
+        android:layout_below="@+id/txt_balanceTotal"
+        android:textColor="@color/white"
+        android:textSize="@dimen/x14"
+        app:typeface="OpenSans-Regular.ttf" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

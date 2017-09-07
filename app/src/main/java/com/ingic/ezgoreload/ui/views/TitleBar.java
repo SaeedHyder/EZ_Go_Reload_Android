@@ -15,6 +15,10 @@ public class TitleBar extends RelativeLayout {
 	private TextView txtTitle;
 	private ImageView btnLeft;
 	private ImageView btnRight;
+	private TextView txtbalance;
+	private RelativeLayout rl_balance;
+
+
 
 
 	private View.OnClickListener menuButtonListener;
@@ -51,7 +55,8 @@ public class TitleBar extends RelativeLayout {
 		txtTitle = (TextView) this.findViewById(R.id.txt_subHead);
 		btnRight = (ImageView) this.findViewById(R.id.btnRight);
 		btnLeft = (ImageView) this.findViewById(R.id.btnLeft);
-
+		txtbalance = (TextView) this.findViewById(R.id.txt_balanceTotal);
+		rl_balance = (RelativeLayout) this.findViewById(R.id.rl_balance);
 
 	}
 
@@ -66,6 +71,8 @@ public class TitleBar extends RelativeLayout {
 		txtTitle.setVisibility(View.GONE);
 		btnLeft.setVisibility(View.GONE);
 		btnRight.setVisibility(View.GONE);
+		rl_balance.setVisibility(View.GONE);
+
 
 	}
 
@@ -78,13 +85,17 @@ public class TitleBar extends RelativeLayout {
 	public void showMenuButton() {
 		btnLeft.setVisibility(View.VISIBLE);
 		btnLeft.setOnClickListener(menuButtonListener);
-		btnLeft.setImageResource(R.drawable.ic_launcher);
+		btnLeft.setImageResource(R.drawable.sidemenu);
 	}
 
 	public void setSubHeading(String heading) {
 		txtTitle.setVisibility(View.VISIBLE);
 		txtTitle.setText(heading);
 
+	}
+	public void setTotalBalance(String balance) {
+		rl_balance.setVisibility(View.VISIBLE);
+		txtbalance.setText(balance);
 	}
 
 	public void showTitleBar() {

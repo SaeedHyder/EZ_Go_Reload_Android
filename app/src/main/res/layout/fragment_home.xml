@@ -1,9 +1,220 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<ListView
-    android:id="@+id/listView"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"></ListView>
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:layout_gravity="center"
+        android:gravity="bottom"
+        android:paddingBottom="@dimen/x30"
+        android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/logo"/>
+    
+    <com.ingic.ezgoreload.ui.views.AnyTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_to_our_app"
+        android:gravity="center"
+        android:textSize="@dimen/x22"
+        android:layout_marginTop="@dimen/x10"
+        app:typeface="Roboto-Regular.ttf"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginRight="@dimen/x10"
+        android:layout_marginTop="@dimen/x25"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_addCredit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x100"
+            android:layout_weight="1"
+            android:background="@drawable/right_bottom_line"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/x5"
+                android:src="@drawable/addcredit" />
+
+            <com.ingic.ezgoreload.ui.views.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/x2"
+                android:gravity="center"
+                android:text="@string/add_credits"
+                app:typeface="Roboto-Regular.ttf" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_accountOverview"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x100"
+            android:layout_weight="1"
+            android:background="@drawable/right_bottom_line"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/x5"
+                android:src="@drawable/account" />
+
+            <com.ingic.ezgoreload.ui.views.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/x2"
+                android:text="@string/account_overview"
+                app:typeface="Roboto-Regular.ttf" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_transponders"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x100"
+            android:layout_weight="1"
+            android:background="@drawable/home_bottom_line"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/x5"
+                android:src="@drawable/transponder" />
+
+            <com.ingic.ezgoreload.ui.views.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/x2"
+                android:text="@string/transponders"
+                app:typeface="Roboto-Regular.ttf" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginRight="@dimen/x10"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_vehicles"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x100"
+            android:layout_weight="1"
+            android:background="@drawable/home_right_line"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/x5"
+                android:src="@drawable/vehicles" />
+
+            <com.ingic.ezgoreload.ui.views.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/x2"
+                android:gravity="center"
+                android:text="@string/vehicles"
+                app:typeface="Roboto-Regular.ttf" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_paymentOptions"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x100"
+            android:layout_weight="1"
+            android:background="@drawable/home_right_line"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/x5"
+                android:src="@drawable/payment_home" />
+
+            <com.ingic.ezgoreload.ui.views.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/x2"
+                android:text="@string/payment_options"
+                app:typeface="Roboto-Regular.ttf" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_userInfo"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x100"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/x5"
+                android:src="@drawable/user_home" />
+
+            <com.ingic.ezgoreload.ui.views.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/x2"
+                android:text="@string/user_info"
+                app:typeface="Roboto-Regular.ttf" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
 </LinearLayout>
