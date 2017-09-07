@@ -4,7 +4,7 @@
     android:id="@+id/header_layout"
     android:layout_width="fill_parent"
     android:layout_height="@dimen/x50"
-    android:background="@color/red">
+    android:background="@color/btn_blue">
 
 
     <ImageView

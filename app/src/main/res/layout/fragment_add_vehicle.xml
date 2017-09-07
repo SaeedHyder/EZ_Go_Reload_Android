@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/x20"
+        android:layout_marginStart="@dimen/x20"
+        android:layout_marginTop="@dimen/x20"
+        android:orientation="horizontal">
+
+        <com.ingic.ezgoreload.ui.views.AnyEditTextView
+            android:id="@+id/edtplate"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x40"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_weight="1"
+            android:alpha="0.8"
+            android:background="@drawable/bottom_line"
+            android:gravity="center_vertical"
+            android:hint="@string/plate"
+            android:imeOptions="actionNext"
+            android:inputType="textMultiLine"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:paddingEnd="@dimen/x5"
+            android:paddingStart="@dimen/x5"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+        <com.ingic.ezgoreload.ui.views.AnyEditTextView
+            android:id="@+id/edtyear"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x40"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_weight="1"
+            android:alpha="0.8"
+            android:background="@drawable/bottom_line"
+            android:gravity="center_vertical"
+            android:hint="@string/year"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="4"
+            android:maxLines="1"
+            android:paddingEnd="@dimen/x5"
+            android:paddingStart="@dimen/x5"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+        <com.ingic.ezgoreload.ui.views.AnyEditTextView
+            android:id="@+id/edtfl"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x40"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:alpha="0.8"
+
+            android:background="@drawable/bottom_line"
+            android:gravity="center_vertical"
+            android:hint="@string/fl"
+            android:imeOptions="actionNext"
+            android:inputType="textMultiLine"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:paddingEnd="@dimen/x5"
+            android:paddingStart="@dimen/x5"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/x20"
+        android:layout_marginStart="@dimen/x20"
+        android:layout_marginTop="@dimen/x20"
+        android:orientation="horizontal">
+
+        <com.ingic.ezgoreload.ui.views.AnyEditTextView
+            android:id="@+id/edtmake"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x40"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_weight="1"
+            android:alpha="0.8"
+            android:background="@drawable/bottom_line"
+            android:gravity="center_vertical"
+            android:hint="@string/make"
+            android:imeOptions="actionNext"
+            android:inputType="textMultiLine"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:paddingEnd="@dimen/x5"
+            android:paddingStart="@dimen/x5"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+        <com.ingic.ezgoreload.ui.views.AnyEditTextView
+            android:id="@+id/edtmodel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x40"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_weight="1"
+            android:alpha="0.8"
+            android:background="@drawable/bottom_line"
+            android:gravity="center_vertical"
+            android:hint="@string/moel"
+            android:imeOptions="actionNext"
+            android:inputType="textMultiLine"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:paddingEnd="@dimen/x5"
+            android:paddingStart="@dimen/x5"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+        <com.ingic.ezgoreload.ui.views.AnyEditTextView
+            android:id="@+id/edtcolor"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x40"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:alpha="0.8"
+            android:background="@drawable/bottom_line"
+            android:gravity="center_vertical"
+            android:hint="@string/color"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:paddingEnd="@dimen/x5"
+            android:paddingStart="@dimen/x5"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/x20"
+        android:layout_marginStart="@dimen/x20"
+        android:layout_marginTop="@dimen/x20"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@drawable/cb_selector"
+            android:paddingLeft="@dimen/x10"
+            android:textSize="@dimen/x15"
+            android:text="@string/own_vehicle"
+            android:textColor="@color/dark_grey" />
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@drawable/cb_selector"
+            android:checked="true"
+            android:paddingLeft="@dimen/x10"
+            android:textSize="@dimen/x15"
+            android:text="@string/rental_vehicle"
+            android:textColor="@color/dark_grey" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/x20"
+        android:layout_marginStart="@dimen/x20"
+        android:layout_marginTop="@dimen/x20"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_startdate"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x40"
+            android:layout_marginEnd="@dimen/x10"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_line"
+            android:orientation="horizontal">
+
+            <com.ingic.ezgoreload.ui.views.AnyTextView
+                android:id="@+id/btn_startdate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:alpha="0.8"
+                android:gravity="center_vertical"
+                android:hint="@string/start_date"
+                android:paddingStart="@dimen/x10"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/x15"
+                app:typeface="Roboto-Regular.ttf" />
+
+            <ImageView
+                android:id="@+id/iv_startdate"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x10"
+                android:contentDescription=""
+                android:src="@drawable/date"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_enddate"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x40"
+            android:layout_marginStart="@dimen/x10"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_line"
+            android:orientation="horizontal">
+
+            <com.ingic.ezgoreload.ui.views.AnyTextView
+                android:id="@+id/btn_enddate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+
+                android:layout_weight="0.8"
+                android:alpha="0.8"
+                android:gravity="center_vertical"
+                android:hint="@string/end_date"
+                android:paddingStart="@dimen/x10"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/x15"
+                app:typeface="Roboto-Regular.ttf" />
+
+            <ImageView
+                android:id="@+id/iv_enddate"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x10"
+                android:contentDescription=""
+                android:src="@drawable/date"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="@dimen/x280"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x25"
+        android:background="@drawable/button_rect_blue"
+        android:text="@string/submit_information"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+</LinearLayout>

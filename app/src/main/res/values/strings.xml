@@ -94,5 +94,20 @@
     <string name="pinlenght">Enter Valid Pin</string>
     <string name="reset_pin_message">Reset Pin has benn send to your Email Address</string>
     <string name="reset_pin">Reset Pin</string>
+    <string name="plate">Plate #</string>
+    <string name="year">Year</string>
+    <string name="fl">FL</string>
+    <string name="make">Make</string>
+    <string name="moel">Model</string>
+    <string name="color">Color</string>
+    <string name="own_vehicle">Own Vehicle</string>
+    <string name="rental_vehicle">Rental Vehicle</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="submit_information">Submit Information</string>
+    <string name="add_vehicle">Add Vehicle</string>
+    <string name="no">No.</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="card_list">Credit Card List</string>
 
 </resources>
