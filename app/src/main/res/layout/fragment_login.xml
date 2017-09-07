@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollview_bigdaddy"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/txt_subHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x15"
+            android:gravity="center"
+            android:text="Login"
+            android:textColor="@color/black"
+            android:textSize="@dimen/x17"
+            app:typeface="OpenSans-Regular.ttf" />
+
+        <ImageView
+            android:layout_width="@dimen/x120"
+            android:layout_height="@dimen/x120"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x20"
+            android:src="@drawable/logo" />
+
+        <LinearLayout
+            android:id="@+id/ll_userName"
+            android:layout_width="@dimen/x280"
+            android:layout_height="@dimen/x40"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x20"
+            android:background="@drawable/bottom_line"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_username"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x10"
+                android:contentDescription=""
+                android:src="@drawable/username"
+                tools:ignore="ContentDescription" />
+
+            <com.ingic.ezgoreload.ui.views.AnyEditTextView
+                android:id="@+id/edtUserName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x12"
+                android:alpha="0.8"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/username_account_id"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/x15"
+                app:typeface="Roboto-Regular.ttf" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_pin"
+            android:layout_width="@dimen/x280"
+            android:layout_height="@dimen/x40"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x10"
+            android:background="@drawable/bottom_line"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_pin"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x10"
+                android:contentDescription=""
+                android:src="@drawable/pin"
+                tools:ignore="ContentDescription" />
+
+            <com.ingic.ezgoreload.ui.views.AnyEditTextView
+                android:id="@+id/edtpin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/x12"
+
+                android:alpha="0.8"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/pin"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="4"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/x15"
+                app:typeface="Roboto-Regular.ttf" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="@dimen/x280"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x15"
+            android:background="@drawable/button_rect_blue"
+            android:text="@string/account_log_in"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="@dimen/x280"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x15"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/x1"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:alpha="0.8"
+                android:background="@color/black" />
+
+            <com.ingic.ezgoreload.ui.views.AnyTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:gravity="center_horizontal"
+                android:text="or"
+                android:textColor="@color/black"
+                app:typeface="Roboto-Regular.ttf" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/x1"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:alpha="0.8"
+                android:background="@color/black" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="@dimen/x280"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x15"
+            android:background="@drawable/button_rect_black"
+            android:text="Create New User"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/txt_reset_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/x15"
+            android:gravity="center"
+            android:text="@string/reset_pin"
+            android:textColor="@color/black"
+            android:textSize="@dimen/x17"
+            app:typeface="OpenSans-Regular.ttf" />
+
+        <LinearLayout
+            android:layout_width="@dimen/x280"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/x20"
+            android:layout_marginTop="@dimen/x20"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btn_fb"
+                android:layout_width="@dimen/x30"
+                android:layout_height="@dimen/x30"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x10"
+                android:src="@drawable/fb" />
+
+            <ImageView
+                android:id="@+id/btn_twitter"
+                android:layout_width="@dimen/x30"
+                android:layout_height="@dimen/x30"
+                android:layout_marginLeft="@dimen/x5"
+                android:layout_marginRight="@dimen/x10"
+                android:src="@drawable/twtter" />
+
+            <ImageView
+                android:id="@+id/btn_linkedin"
+                android:layout_width="@dimen/x30"
+                android:layout_height="@dimen/x30"
+                android:layout_marginLeft="@dimen/x5"
+                android:layout_marginRight="@dimen/x10"
+                android:src="@drawable/linedin" />
+
+            <ImageView
+                android:id="@+id/btn_youtube"
+                android:layout_width="@dimen/x30"
+                android:layout_height="@dimen/x30"
+                android:layout_marginLeft="@dimen/x5"
+                android:layout_marginRight="@dimen/x10"
+                android:src="@drawable/youtube" />
+
+            <ImageView
+                android:id="@+id/btn_insta"
+                android:layout_width="@dimen/x30"
+                android:layout_height="@dimen/x30"
+                android:layout_marginLeft="@dimen/x5"
+                android:layout_marginRight="@dimen/x10"
+                android:src="@drawable/inta" />
+
+            <ImageView
+                android:id="@+id/btn_snapchat"
+                android:layout_width="@dimen/x30"
+                android:layout_height="@dimen/x30"
+                android:layout_marginLeft="@dimen/x5"
+                android:layout_marginRight="@dimen/x10"
+                android:src="@drawable/snap" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
