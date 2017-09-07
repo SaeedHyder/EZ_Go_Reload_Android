@@ -94,5 +94,12 @@
     <string name="pinlenght">Enter Valid Pin</string>
     <string name="reset_pin_message">Reset Pin has benn send to your Email Address</string>
     <string name="reset_pin">Reset Pin</string>
+    <string name="welcome_to_our_app">Welcome to our app!</string>
+    <string name="add_credits">Add Credits</string>
+    <string name="account_overview">Account\nOverview</string>
+    <string name="vehicles">Vehicles</string>
+    <string name="payment_options">Payment\nOptions</string>
+    <string name="user_info">User Info</string>
+    <string name="transponders">Transponders</string>
 
 </resources>
