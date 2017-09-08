@@ -101,5 +101,21 @@
     <string name="payment_options">Payment\nOptions</string>
     <string name="user_info">User Info</string>
     <string name="transponders">Transponders</string>
+    <string name="add_credit">Add Credits</string>
+    <string name="top_up_amount">Top Up Amount</string>
+    <string name="recharge_account">Recharge Account</string>
+    <string name="user_profile">User Profile</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="country">Country</string>
+    <string name="zip_code">Zip Code</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="mobile">Mobile</string>
+    <string name="recieve_receipts_and_newsletter_on_email">Recieve Receipts and Newsletter on Email</string>
+    <string name="submit_information">Submit Information</string>
+    <string name="send_monthly_billing_statements">Send Monthly Billing Statements</string>
+    <string name="name">Name</string>
+    <string name="signup">Signup</string>
 
 </resources>
