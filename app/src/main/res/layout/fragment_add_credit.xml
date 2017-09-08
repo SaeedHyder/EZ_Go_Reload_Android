@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/x20"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x10"
+        android:layout_marginBottom="@dimen/x10">
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/tv_account_credit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_credits"
+            android:textColor="@color/black_credit"
+            android:textSize="@dimen/x18"
+            app:typeface="Roboto-Regular.ttf"
+            android:layout_weight="0.8"/>
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/tv_account_credit_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$450"
+            android:textSize="@dimen/x18"
+            android:textColor="blue_credit"
+            app:typeface="Roboto-Regular.ttf"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="0.2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x10"
+        android:layout_marginBottom="@dimen/x10">
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/tv_topup_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/top_up_amount"
+            android:textSize="@dimen/x18"
+            android:textColor="@color/black_credit"
+            app:typeface="Roboto-Regular.ttf"
+            android:layout_gravity="center"
+            android:layout_weight="0.8"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/x5"
+            android:background="@drawable/rectangle_add_credit"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:layout_gravity="center"
+            >
+
+            <com.ingic.ezgoreload.ui.views.AnyTextView
+                android:id="@+id/tv_topup_amount_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x10"
+                android:layout_marginBottom="@dimen/x10"
+                android:text="$45"
+                android:textSize="@dimen/x18"
+                app:typeface="Roboto-Regular.ttf"
+                android:gravity="center"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x10"
+        android:layout_marginBottom="@dimen/x10">
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/tv_total_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black_credit"
+            android:text="Total Payment"
+            android:textSize="@dimen/x18"
+            app:typeface="Roboto-Regular.ttf"
+            android:layout_weight="0.8"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/x5"
+            android:background="@drawable/rectangle_add_credit"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:layout_gravity="center" >
+
+            <com.ingic.ezgoreload.ui.views.AnyTextView
+                android:id="@+id/tv_total_payment_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x10"
+                android:layout_marginBottom="@dimen/x10"
+                android:text="$45"
+                android:textSize="@dimen/x18"
+                app:typeface="Roboto-Regular.ttf"
+                android:gravity="center"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="@dimen/x280"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x15"
+        android:background="@drawable/button_rect_blue"
+        android:text="@string/recharge_account"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</LinearLayout>

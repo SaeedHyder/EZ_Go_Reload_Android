@@ -26,6 +26,13 @@
     <color name="lite_purple">#9C94A3</color>
     <color name="gray_dark">#929292</color>
 
+    <!--CreditCardScreen-->
+    <color name="blue_credit">#0A5F9E</color>
+    <color name="black_credit">#2B2B2B</color>
+
+
+
+
 
 
     <!-- App specific colors -->
