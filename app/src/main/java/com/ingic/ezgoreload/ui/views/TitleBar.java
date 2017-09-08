@@ -1,6 +1,7 @@
 package com.ingic.ezgoreload.ui.views;
 
 import android.content.Context;
+import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +18,7 @@ public class TitleBar extends RelativeLayout {
 	private ImageView btnRight;
 	private TextView txtbalance;
 	private RelativeLayout rl_balance;
-
+	private AnyEditTextView searchView;
 
 
 
@@ -57,6 +58,7 @@ public class TitleBar extends RelativeLayout {
 		btnLeft = (ImageView) this.findViewById(R.id.btnLeft);
 		txtbalance = (TextView) this.findViewById(R.id.txt_balanceTotal);
 		rl_balance = (RelativeLayout) this.findViewById(R.id.rl_balance);
+		searchView = (AnyEditTextView)this.findViewById(R.id.edtSearch);
 
 	}
 
@@ -72,6 +74,7 @@ public class TitleBar extends RelativeLayout {
 		btnLeft.setVisibility(View.GONE);
 		btnRight.setVisibility(View.GONE);
 		rl_balance.setVisibility(View.GONE);
+		searchView.setVisibility(View.GONE);
 
 
 	}
@@ -86,6 +89,16 @@ public class TitleBar extends RelativeLayout {
 		btnRight.setOnClickListener(onClickListener);
 		btnRight.setImageResource(R.drawable.usertop);
 	}
+	public void showSearchButton(OnClickListener onClickListener) {
+		btnRight.setVisibility(View.VISIBLE);
+		btnRight.setOnClickListener(onClickListener);
+		btnRight.setImageResource(R.drawable.search);
+	}
+	public void showSearchEditText(TextWatcher textWatcher){
+		searchView.setVisibility(View.VISIBLE);
+		searchView.addTextChangedListener(textWatcher);
+	}
+
 	public void showAddButton(OnClickListener onClickListener) {
 		btnRight.setVisibility(View.VISIBLE);
 		btnRight.setOnClickListener(onClickListener);

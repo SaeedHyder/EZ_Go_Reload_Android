@@ -1,28 +1,251 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="?android:windowBackground"
-    android:orientation="vertical">
+    android:background="@color/sidemenu_blue"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/x20"
+    android:paddingTop="@dimen/x20">
 
-    <Button
-        android:id="@+id/payment_Options"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Payment Options"/>
+        android:layout_height="wrap_content">
 
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_profile"
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/x80"
+            android:src="@drawable/profileimage" />
 
-    <Button
-        android:id="@+id/accountOverview"
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/txt_user_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x10"
+            android:layout_marginTop="@dimen/x15"
+            android:layout_toEndOf="@+id/img_profile"
+            android:gravity="center"
+            android:text="Johnny Will"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x22"
+            app:typeface="Roboto-Regular.ttf" />
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/txt_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_user_profile"
+            android:layout_marginStart="@dimen/x10"
+            android:layout_toEndOf="@+id/img_profile"
+            android:gravity="center"
+            android:text="Account# 12345678"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/x13"
+            app:typeface="Roboto-Regular.ttf" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_home"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Account Overview"/>
-<ExpandableListView
-    android:id="@+id/expandablelistview"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:visibility="gone"
-    android:divider="@android:color/darker_gray"
-    android:dividerHeight="0.5dp"
-    android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"></ExpandableListView>
+        android:layout_height="@dimen/x40"
+        android:layout_marginTop="@dimen/x25"
+        android:background="@drawable/bottom_line_nav"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_home"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x20"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x10"
+            android:contentDescription=""
+            android:src="@drawable/home_nav"
+            tools:ignore="ContentDescription" />
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/btn_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:alpha="0.8"
+            android:gravity="center_vertical"
+            android:text="@string/Home"
+            android:paddingStart="@dimen/x10"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_account"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        android:background="@drawable/bottom_line_nav"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_account"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x20"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x10"
+            android:contentDescription=""
+            android:src="@drawable/account_nav"
+            tools:ignore="ContentDescription" />
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/btn_acount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:alpha="0.8"
+            android:gravity="center_vertical"
+            android:text="@string/Account_Overview"
+            android:paddingStart="@dimen/x10"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_transponders"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        android:background="@drawable/bottom_line_nav"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_transponder"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x20"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x10"
+            android:contentDescription=""
+            android:src="@drawable/transponder_nav"
+            tools:ignore="ContentDescription" />
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/btn_transponder"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:alpha="0.8"
+            android:gravity="center_vertical"
+            android:text="@string/transponder_list"
+            android:paddingStart="@dimen/x10"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_paymentOptions"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+
+        android:background="@drawable/bottom_line_nav"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_payment"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x20"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x10"
+            android:contentDescription=""
+            android:src="@drawable/payment_nav"
+            tools:ignore="ContentDescription" />
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/btn_payment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:alpha="0.8"
+            android:gravity="center_vertical"
+            android:text="@string/paymentoptions"
+            android:paddingStart="@dimen/x10"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_userInfo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+
+        android:background="@drawable/bottom_line_nav"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_userinfo"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x20"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x10"
+            android:contentDescription=""
+            android:src="@drawable/user_nav"
+            tools:ignore="ContentDescription" />
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/btn_userinfo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:alpha="0.8"
+            android:gravity="center_vertical"
+            android:text="@string/user_information"
+            android:paddingStart="@dimen/x10"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_logout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+
+        android:background="@drawable/bottom_line_nav"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_logout"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x20"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x10"
+            android:contentDescription=""
+            android:src="@drawable/logout_nav"
+            tools:ignore="ContentDescription" />
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/btn_logout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:alpha="0.8"
+            android:gravity="center_vertical"
+            android:text="@string/logout"
+            android:paddingStart="@dimen/x10"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+    </LinearLayout>
+
 </LinearLayout>

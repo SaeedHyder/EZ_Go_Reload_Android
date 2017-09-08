@@ -70,6 +70,12 @@ public class ArrayListAdapter<T> extends BaseAdapter implements SpinnerAdapter {
 		arrayList.addAll( entityList );
 		notifyDataSetChanged();
 	}
+	public void removeItemAtPosition(int position){
+		if (arrayList.size()>position){
+			arrayList.remove(position);
+			notifyDataSetChanged();
+		}
+	}
 	
 	@Override
 	public int getCount() {

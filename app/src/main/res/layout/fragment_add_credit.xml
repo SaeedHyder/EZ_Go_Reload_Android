@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:text="$450"
             android:textSize="@dimen/x18"
-            android:textColor="blue_credit"
+            android:textColor="@color/blue_credit"
             app:typeface="Roboto-Regular.ttf"
             android:gravity="center"
             android:layout_gravity="center"

@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="@dimen/x55"
         android:orientation="horizontal"
-        android:background="@color/color_list_header"
         android:gravity="center">
         <com.ingic.ezgoreload.ui.views.AnyTextView
             android:id="@+id/txt_Snumber"
@@ -17,10 +17,10 @@
             android:layout_weight="0.8"
             android:alpha="0.8"
             android:gravity="center"
-            android:hint="@string/no"
-
+            android:hint="@string/start_date"
+            android:paddingStart="@dimen/x10"
             android:textColor="@color/black"
-
+            android:text="09788954"
             android:textColorHint="@color/black"
             android:textSize="@dimen/x15"
             app:typeface="Roboto-Regular.ttf" />
@@ -30,30 +30,37 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.8"
             android:alpha="0.8"
-
+            android:text="xyz Car"
             android:gravity="center"
-            android:hint="@string/credit_card"
-
+            android:hint="@string/start_date"
+            android:paddingStart="@dimen/x10"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             android:textSize="@dimen/x15"
             app:typeface="Roboto-Regular.ttf" />
-        <com.ingic.ezgoreload.ui.views.AnyTextView
+        <com.ingic.ezgoreload.ui.views.AnySpinner
+            android:id="@+id/spn_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"/>
+        <!--<com.ingic.ezgoreload.ui.views.AnyTextView
             android:id="@+id/txt_card_status"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.8"
             android:alpha="0.8"
             android:gravity="center"
-            android:hint="Status"
-
+            android:text="inactive"
+            android:hint="@string/start_date"
+            android:paddingStart="@dimen/x10"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             android:textSize="@dimen/x15"
-            app:typeface="Roboto-Regular.ttf" />
+            app:typeface="Roboto-Regular.ttf" />-->
     </LinearLayout>
-    <ListView
-        android:id="@+id/listView_card"
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="@dimen/x1"
+        android:alpha="0.7"
+        android:background="@color/btn_black"/>
 </LinearLayout>

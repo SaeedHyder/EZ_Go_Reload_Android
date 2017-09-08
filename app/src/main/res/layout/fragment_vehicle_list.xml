@@ -17,10 +17,8 @@
             android:layout_weight="0.8"
             android:alpha="0.8"
             android:gravity="center"
-            android:hint="@string/no"
-
+            android:hint="@string/vehicle_name"
             android:textColor="@color/black"
-
             android:textColorHint="@color/black"
             android:textSize="@dimen/x15"
             app:typeface="Roboto-Regular.ttf" />
@@ -30,10 +28,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.8"
             android:alpha="0.8"
-
             android:gravity="center"
-            android:hint="@string/credit_card"
-
+            android:hint="@string/credit_used"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             android:textSize="@dimen/x15"
@@ -45,8 +41,7 @@
             android:layout_weight="0.8"
             android:alpha="0.8"
             android:gravity="center"
-            android:hint="Status"
-
+            android:hint="@string/status"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             android:textSize="@dimen/x15"

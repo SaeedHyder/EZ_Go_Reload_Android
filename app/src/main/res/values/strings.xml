@@ -139,5 +139,33 @@
     <string name="Account_Overview">Account Overview</string>
     <string name="Home">Home</string>
     <string name="payment_history">Payment History</string>
+    <string name="delete_card_message">Do you want to delete this Credit Card</string>
+    <string name="delete_card">Delete Credit Card</string>
+    <string name="transponders_nid">Transponders \n ID</string>
+    <string name="selected_name">Selected \n Name</string>
+    <string name="transponders_status">Transponders \n Status</string>
+    <string name="transponder_list">Transponders</string>
+    <string name="delete_Transponder_message">Do you want to delete this Transponder</string>
+    <string name="delete_transponder">Delete Transponder</string>
+    <string name="search">Search</string>
+    <string name="paymentoptions">Payment Options</string>
+    <string name="user_information">User Information</string>
+    <string name="logout">Logout</string>
+    <string name="vehicle_overview">Vehicle\'s Overview</string>
+    <string name="delete_vehicle_message">Do you want to delete this Vehicle</string>
+    <string name="delete_vehicle">Delete Vehicle</string>
+    <string name="vehicle_name">Vehicle Name</string>
+    <string name="credit_used">Credit Used</string>
+    <string name="status">Status</string>
+    <string name="edit_message">Do you want to Edit</string>
+    <string name="edit_item">Edit Vehicle</string>
+    <string name="edit_item_transponder">Edit Transponder</string>
+    <string name="edit_item_card">Edit Credit Card</string>
+    <string name="credit_nleft">Credit\nLeft</string>
+    <string name="location">Location</string>
+    <string name="time">Time</string>
+    <string name="date">Date</string>
+    <string name="charged_credit">Charged\nCredit</string>
+    <string name="select_date_range">Select Date Range</string>
 
 </resources>

@@ -7,7 +7,6 @@
     android:background="@color/btn_blue">
 
 
-
     <ImageView
         android:id="@+id/btnLeft"
         android:layout_width="wrap_content"
@@ -42,6 +41,28 @@
         android:src="@drawable/ic_launcher"
         android:visibility="visible" />
 
+    <com.ingic.ezgoreload.ui.views.AnyEditTextView
+        android:id="@+id/edtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x12"
+        android:layout_toEndOf="@+id/btnLeft"
+        android:layout_toStartOf="@+id/btnRight"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:hint="@string/search"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:paddingStart="@dimen/x5"
+        android:maxLength="30"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="@dimen/x15"
+        app:typeface="OpenSans-Regular.ttf"
+        android:visibility="gone"/>
+
     <RelativeLayout
         android:id="@+id/rl_balance"
         android:layout_width="wrap_content"
@@ -51,26 +72,26 @@
         android:layout_marginRight="@dimen/x10"
         android:visibility="gone">
 
-    <com.ingic.ezgoreload.ui.views.AnyTextView
-        android:id="@+id/txt_balanceTotal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Template"
-        android:textColor="@color/green"
-        android:textSize="@dimen/x16"
-        app:typeface="OpenSans-Regular.ttf" />
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/txt_balanceTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Template"
+            android:textColor="@color/green"
+            android:textSize="@dimen/x16"
+            app:typeface="OpenSans-Regular.ttf" />
 
-    <com.ingic.ezgoreload.ui.views.AnyTextView
-        android:id="@+id/txt_balance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Balance"
-        android:layout_below="@+id/txt_balanceTotal"
-        android:textColor="@color/white"
-        android:textSize="@dimen/x14"
-        app:typeface="OpenSans-Regular.ttf" />
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/txt_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_balanceTotal"
+            android:layout_centerHorizontal="true"
+            android:text="Balance"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x14"
+            app:typeface="OpenSans-Regular.ttf" />
 
     </RelativeLayout>
 
