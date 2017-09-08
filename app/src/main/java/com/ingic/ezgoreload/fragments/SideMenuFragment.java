@@ -20,6 +20,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class SideMenuFragment extends BaseFragment {
 
 
+
     @BindView(R.id.img_profile)
     CircleImageView imgProfile;
     @BindView(R.id.txt_user_profile)
@@ -38,6 +39,7 @@ public class SideMenuFragment extends BaseFragment {
     AnyTextView btnUserinfo;
     @BindView(R.id.btn_logout)
     AnyTextView btnLogout;
+
 
 
     public static SideMenuFragment newInstance() {
@@ -66,7 +68,6 @@ public class SideMenuFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
 
     }
 

@@ -58,22 +58,19 @@
             android:layout_weight="0.8"/>
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/x5"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x35"
             android:background="@drawable/rectangle_add_credit"
             android:layout_weight="0.2"
             android:gravity="center"
-            android:layout_gravity="center"
-            >
+            android:layout_marginRight="@dimen/x10"
+            android:layout_gravity="center">
 
             <com.ingic.ezgoreload.ui.views.AnyTextView
                 android:id="@+id/tv_topup_amount_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/x10"
-                android:layout_marginBottom="@dimen/x10"
-                android:text="$45"
+                android:text="@string/_45"
                 android:textSize="@dimen/x18"
                 app:typeface="Roboto-Regular.ttf"
                 android:gravity="center"
@@ -98,15 +95,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textColor="@color/black_credit"
-            android:text="Total Payment"
+            android:text="@string/total_payment"
             android:textSize="@dimen/x18"
             app:typeface="Roboto-Regular.ttf"
             android:layout_weight="0.8"/>
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/x5"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x35"
+            android:layout_marginRight="@dimen/x10"
             android:background="@drawable/rectangle_add_credit"
             android:layout_weight="0.2"
             android:gravity="center"
@@ -116,9 +113,7 @@
                 android:id="@+id/tv_total_payment_amount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/x10"
-                android:layout_marginBottom="@dimen/x10"
-                android:text="$45"
+                android:text="@string/_45"
                 android:textSize="@dimen/x18"
                 app:typeface="Roboto-Regular.ttf"
                 android:gravity="center"

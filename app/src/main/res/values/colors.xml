@@ -29,6 +29,9 @@
     <!--CreditCardScreen-->
     <color name="blue_credit">#0A5F9E</color>
     <color name="black_credit">#2B2B2B</color>
+    <color name="blue_tab">#0B456F</color>
+    <color name="tab_line">#67C4FF</color>
+
 
 
     <!-- App specific colors -->

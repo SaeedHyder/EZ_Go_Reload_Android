@@ -62,6 +62,9 @@ public class UserProfileFragment extends BaseFragment {
     @BindView(R.id.scrollview_bigdaddy)
     ScrollView scrollview_bigdaddy;
 
+    boolean CheckerBilings;
+    boolean CheckerReceipts;
+
     Unbinder unbinder;
 
     public static UserProfileFragment newInstance() {
@@ -112,9 +115,27 @@ public class UserProfileFragment extends BaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rb_receipts:
+
+                if (CheckerReceipts) {
+                    rb_receipts.setChecked(true);
+                    CheckerReceipts = false;
+                } else {
+                    rb_receipts.setChecked(false);
+                    CheckerReceipts = true;
+                }
                 break;
+
             case R.id.rb_billings:
+
+                if (CheckerBilings) {
+                    rb_billings.setChecked(true);
+                    CheckerBilings = false;
+                } else {
+                    rb_billings.setChecked(false);
+                    CheckerBilings = true;
+                }
                 break;
+
             case R.id.btn_submit_info:
                 if (validate())
                     if (edt_address.getText().toString().length()<5){

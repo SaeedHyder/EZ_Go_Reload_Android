@@ -9,6 +9,7 @@
     android:paddingStart="@dimen/x20"
     android:paddingTop="@dimen/x20">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -247,5 +248,6 @@
             app:typeface="Roboto-Regular.ttf" />
 
     </LinearLayout>
+
 
 </LinearLayout>
