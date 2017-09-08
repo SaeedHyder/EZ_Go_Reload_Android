@@ -42,9 +42,6 @@ public class LoginFragment extends BaseFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onViewCreated(view, savedInstanceState);
-        ButterKnife.bind(this, view);
-
-
     }
 
 

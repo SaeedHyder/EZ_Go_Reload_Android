@@ -94,6 +94,23 @@
     <string name="pinlenght">Enter Valid Pin</string>
     <string name="reset_pin_message">Reset Pin has benn send to your Email Address</string>
     <string name="reset_pin">Reset Pin</string>
+
+    <string name="plate">Plate #</string>
+    <string name="year">Year</string>
+    <string name="fl">FL</string>
+    <string name="make">Make</string>
+    <string name="moel">Model</string>
+    <string name="color">Color</string>
+    <string name="own_vehicle">Own Vehicle</string>
+    <string name="rental_vehicle">Rental Vehicle</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="submit_information">Submit Information</string>
+    <string name="add_vehicle">Add Vehicle</string>
+    <string name="no">No.</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="card_list">Credit Card List</string>
+
     <string name="welcome_to_our_app">Welcome to our app!</string>
     <string name="add_credits">Add Credits</string>
     <string name="account_overview">Account\nOverview</string>
@@ -101,6 +118,7 @@
     <string name="payment_options">Payment\nOptions</string>
     <string name="user_info">User Info</string>
     <string name="transponders">Transponders</string>
+
     <string name="add_credit">Add Credits</string>
     <string name="top_up_amount">Top Up Amount</string>
     <string name="recharge_account">Recharge Account</string>
@@ -113,9 +131,13 @@
     <string name="phone">Phone</string>
     <string name="mobile">Mobile</string>
     <string name="recieve_receipts_and_newsletter_on_email">Recieve Receipts and Newsletter on Email</string>
-    <string name="submit_information">Submit Information</string>
     <string name="send_monthly_billing_statements">Send Monthly Billing Statements</string>
     <string name="name">Name</string>
     <string name="signup">Signup</string>
+
+    <string name="payment_method">Payment Method</string>
+    <string name="Account_Overview">Account Overview</string>
+    <string name="Home">Home</string>
+    <string name="payment_history">Payment History</string>
 
 </resources>

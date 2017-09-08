@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/ll_newCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x15"
+        android:layout_marginRight="@dimen/x15"
+        android:layout_marginTop="@dimen/x15"
+        android:layout_marginBottom="@dimen/x15"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/newcard"/>
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Setup New Card"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/x15"
+            android:layout_marginLeft="@dimen/x10"
+            app:typeface="Roboto-Regular.ttf"/>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x1"
+        android:layout_gravity="center_vertical"
+        android:alpha="0.3"
+        android:background="@color/black" />
+
+    <LinearLayout
+        android:id="@+id/ll_replace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x15"
+        android:layout_marginRight="@dimen/x15"
+        android:layout_marginTop="@dimen/x15"
+        android:layout_marginBottom="@dimen/x15"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/replacecard"/>
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Replace Card"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/x15"
+            android:layout_marginLeft="@dimen/x10"
+            app:typeface="Roboto-Regular.ttf"/>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x1"
+        android:layout_gravity="center_vertical"
+        android:alpha="0.3"
+        android:background="@color/black" />
+
+</LinearLayout>

@@ -55,7 +55,7 @@ public class HomeFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        getDockActivity().replaceDockableFragment(CardListFragment.newInstance(),"asd");
     }
 
 
@@ -65,7 +65,7 @@ public class HomeFragment extends BaseFragment {
         titleBar.hideButtons();
         titleBar.showMenuButton();
         titleBar.setTotalBalance("$1059");
-        titleBar.setSubHeading("Home");
+        titleBar.setSubHeading(getString(R.string.Home));
 
     }
 

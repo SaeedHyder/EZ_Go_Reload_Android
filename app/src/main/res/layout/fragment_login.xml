@@ -193,7 +193,7 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <ImageView
+             <ImageView
                 android:id="@+id/btn_fb"
                 android:layout_width="@dimen/x30"
                 android:layout_height="@dimen/x30"
