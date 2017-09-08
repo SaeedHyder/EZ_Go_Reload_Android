@@ -139,5 +139,19 @@
     <string name="Account_Overview">Account Overview</string>
     <string name="Home">Home</string>
     <string name="payment_history">Payment History</string>
+    <string name="pay_by_new_card">Pay by New Card</string>
+    <string name="pay_by_existing_card">Pay by Existing Card</string>
+    <string name="card_number">Card Number</string>
+    <string name="name_on_card">Name on Card</string>
+    <string name="cvv2_code">CVV2 Code</string>
+    <string name="expiration_date">Expiration Date</string>
+    <string name="replace_credit_card_on_payment">Replace Credit Card on Payment</string>
+    <string name="submit">Submit</string>
+    <string name="card_1">Card-1</string>
+    <string name="card_2">Card-2</string>
+    <string name="card_3">Card-3</string>
+    <string name="pay">Pay</string>
+    <string name="_45">$45</string>
+    <string name="total_payment">Total Payment</string>
 
 </resources>

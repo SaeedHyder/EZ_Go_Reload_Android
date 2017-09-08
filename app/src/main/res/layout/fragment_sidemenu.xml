@@ -5,24 +5,5 @@
     android:background="?android:windowBackground"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/payment_Options"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Payment Options"/>
 
-
-    <Button
-        android:id="@+id/accountOverview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Account Overview"/>
-<ExpandableListView
-    android:id="@+id/expandablelistview"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:visibility="gone"
-    android:divider="@android:color/darker_gray"
-    android:dividerHeight="0.5dp"
-    android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"></ExpandableListView>
 </LinearLayout>

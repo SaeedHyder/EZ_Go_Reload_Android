@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50"
+        android:background="@color/blue_tab"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.5"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical">
+
+            <com.ingic.ezgoreload.ui.views.AnyTextView
+                android:id="@+id/tv_new_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/pay_by_new_card"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x15"
+                app:typeface="Roboto-Regular.ttf"
+                android:alpha="0.6"
+                android:layout_weight="0.9"/>
+
+            <View
+                android:id="@+id/view_new_card"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x2"
+                android:alpha="0.5"
+                android:background="@color/tab_line"
+                android:visibility="gone"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:layout_weight="0.1"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_center"
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:alpha="0.3"
+            android:background="@color/white"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.5"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical">
+
+            <com.ingic.ezgoreload.ui.views.AnyTextView
+                android:id="@+id/tv_existing_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/pay_by_existing_card"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x15"
+                app:typeface="Roboto-Regular.ttf"
+                android:alpha="0.6"
+                android:layout_weight="0.9"/>
+
+            <View
+                android:id="@+id/view_existing_card"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x2"
+                android:alpha="0.5"
+                android:background="@color/tab_line"
+                android:visibility="gone"
+                android:layout_weight="0.1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+</LinearLayout>

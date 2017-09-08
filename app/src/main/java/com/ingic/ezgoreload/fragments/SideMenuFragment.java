@@ -17,10 +17,7 @@ import butterknife.Unbinder;
 
 public class SideMenuFragment extends BaseFragment {
 
-    @BindView(R.id.payment_Options)
-    Button paymentOptions;
-    @BindView(R.id.accountOverview)
-    Button accountOverview;
+
     Unbinder unbinder;
 
     public static SideMenuFragment newInstance() {
@@ -48,20 +45,6 @@ public class SideMenuFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        paymentOptions.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getDockActivity().addDockableFragment(PaymentOptionsFragment.newInstance(),"PaymentOptions");
-            }
-        });
-        accountOverview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getDockActivity().addDockableFragment(AccountOverviewFragment.newInstance(),"AccountOverviewFragment");
-            }
-        });
-
     }
 
 
