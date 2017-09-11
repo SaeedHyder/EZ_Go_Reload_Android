@@ -134,7 +134,8 @@ public class NewCardFragment extends BaseFragment {
     }
 
     private void initFromPickerValidated(final AnyTextView textView) {
-
+        UIHelper.hideSoftKeyboard( getDockActivity(), getDockActivity()
+                .getWindow().getDecorView() );
         Calendar calendar = Calendar.getInstance();
         final DatePickerHelper datePickerHelper = new DatePickerHelper();
         datePickerHelper.initDateDialog(
@@ -157,7 +158,7 @@ public class NewCardFragment extends BaseFragment {
                             UIHelper.showShortToastInCenter(getDockActivity(), "Please enter valid date.");
                         } else {*/
                         DateSelected = dateSpecified;
-                        String predate = new SimpleDateFormat("yyyy-MM-dd").format(c.getTime());
+                        String predate = new SimpleDateFormat("yyyy-MM").format(c.getTime());
 
                         textView.setText(predate);
                         textView.setPaintFlags(Typeface.BOLD);
