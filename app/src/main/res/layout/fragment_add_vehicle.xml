@@ -202,7 +202,7 @@
         android:layout_marginStart="@dimen/x20"
         android:layout_marginTop="@dimen/x20"
         android:orientation="horizontal"
-        android:visibility="">
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/ll_startdate"
