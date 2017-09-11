@@ -92,6 +92,8 @@ public class PaymentHistoryFragment extends BaseFragment {
     }
 
     private void initDatePicker(final TextView textView, String type, long date, final String tag) {
+        UIHelper.hideSoftKeyboard( getDockActivity(), getDockActivity()
+                .getWindow().getDecorView() );
         Calendar calendar = Calendar.getInstance();
         final DatePickerHelper datePickerHelper = new DatePickerHelper();
         DatePickerDialog pickerDialog = datePickerHelper.initDateDialog(
