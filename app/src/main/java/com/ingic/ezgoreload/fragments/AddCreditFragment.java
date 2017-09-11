@@ -10,7 +10,7 @@ import android.widget.Button;
 
 import com.ingic.ezgoreload.R;
 import com.ingic.ezgoreload.fragments.abstracts.BaseFragment;
-import com.ingic.ezgoreload.helpers.UIHelper;
+import com.ingic.ezgoreload.ui.views.AnyTextView;
 import com.ingic.ezgoreload.ui.views.TitleBar;
 
 import butterknife.BindView;
@@ -20,9 +20,21 @@ import butterknife.Unbinder;
 
 public class AddCreditFragment extends BaseFragment {
 
-    @BindView(R.id.btn_login)
-    Button btnLogin;
     Unbinder unbinder;
+    @BindView(R.id.tv_account_credit)
+    AnyTextView tvAccountCredit;
+    @BindView(R.id.tv_account_credit_price)
+    AnyTextView tvAccountCreditPrice;
+    @BindView(R.id.tv_topup_amount)
+    AnyTextView tvTopupAmount;
+    @BindView(R.id.tv_topup_amount_price)
+    AnyTextView tvTopupAmountPrice;
+    @BindView(R.id.tv_total_payment)
+    AnyTextView tvTotalPayment;
+    @BindView(R.id.tv_total_payment_amount)
+    AnyTextView tvTotalPaymentAmount;
+    @BindView(R.id.btn_recharge)
+    Button btnRecharge;
 
     public static AddCreditFragment newInstance() {
         return new AddCreditFragment();
@@ -61,8 +73,8 @@ public class AddCreditFragment extends BaseFragment {
         unbinder.unbind();
     }
 
-    @OnClick(R.id.btn_login)
+    @OnClick(R.id.btn_recharge)
     public void onViewClicked() {
-        // TODO: 9/8/2017  
+        getDockActivity().popFragment();
     }
 }

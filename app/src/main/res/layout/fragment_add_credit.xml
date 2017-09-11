@@ -123,7 +123,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_recharge"
         android:layout_width="@dimen/x280"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"

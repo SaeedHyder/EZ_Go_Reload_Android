@@ -118,6 +118,8 @@ public class SignupFragment extends BaseFragment {
             } else if (edt_mobile.getText().toString().length()<10){
                 UIHelper.showLongToastInCenter(getDockActivity(), "Mobile number should not be less than 10 digits.");
             } else {
+                prefHelper.setLoginStatus(true);
+                getDockActivity().popBackStackTillEntry(0);
                 getDockActivity().replaceDockableFragment(HomeFragment.newInstance(), "HomeFragment");
             }
     }

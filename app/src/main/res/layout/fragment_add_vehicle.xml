@@ -201,8 +201,7 @@
         android:layout_marginEnd="@dimen/x20"
         android:layout_marginStart="@dimen/x20"
         android:layout_marginTop="@dimen/x20"
-        android:orientation="horizontal"
-        android:visibility="">
+        android:orientation="horizontal">
 
         <LinearLayout
             android:id="@+id/ll_startdate"

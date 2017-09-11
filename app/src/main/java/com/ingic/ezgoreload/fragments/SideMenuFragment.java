@@ -78,20 +78,38 @@ public class SideMenuFragment extends BaseFragment {
         titleBar.hideTitleBar();
     }
 
+    public void closeMenu() {
+        getMainActivity().getResideMenu().closeMenu();
+    }
+
     @OnClick({R.id.btn_home, R.id.btn_acount, R.id.btn_transponder, R.id.btn_payment, R.id.btn_userinfo, R.id.btn_logout})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_home:
+                getDockActivity().replaceDockableFragment(HomeFragment.newInstance(), "HomeFragment");
+                closeMenu();
                 break;
             case R.id.btn_acount:
+                getDockActivity().replaceDockableFragment(AccountOverviewFragment.newInstance(), "AccountOverviewFragment");
+                closeMenu();
                 break;
             case R.id.btn_transponder:
+                getDockActivity().replaceDockableFragment(TransponderListFragment.newInstance(), "TransponderListFragment");
+                closeMenu();
                 break;
             case R.id.btn_payment:
+                getDockActivity().replaceDockableFragment(PaymentOptionsFragment.newInstance(), "PaymentOptionsFragment");
+                closeMenu();
                 break;
             case R.id.btn_userinfo:
+                getDockActivity().replaceDockableFragment(UserProfileFragment.newInstance(), "UserProfileFragment");
+                closeMenu();
                 break;
             case R.id.btn_logout:
+                prefHelper.setLoginStatus(false);
+                getDockActivity().popBackStackTillEntry(0);
+                getDockActivity().replaceDockableFragment(LoginFragment.newInstance(), "LoginFragment");
+                closeMenu();
                 break;
         }
     }

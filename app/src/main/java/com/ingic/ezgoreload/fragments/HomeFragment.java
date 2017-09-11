@@ -13,7 +13,7 @@ import com.ingic.ezgoreload.ui.views.TitleBar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.Unbinder;
+import butterknife.OnClick;
 
 
 public class HomeFragment extends BaseFragment {
@@ -40,15 +40,13 @@ public class HomeFragment extends BaseFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-         ButterKnife.bind(this, view);
+        ButterKnife.bind(this, view);
         return view;
     }
 
@@ -65,5 +63,34 @@ public class HomeFragment extends BaseFragment {
         titleBar.showMenuButton();
         titleBar.setTotalBalance("$1059");
         titleBar.setSubHeading(getString(R.string.Home));
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+    }
+
+    @OnClick({R.id.ll_addCredit, R.id.ll_accountOverview, R.id.ll_transponders, R.id.ll_vehicles, R.id.ll_paymentOptions, R.id.ll_userInfo})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.ll_addCredit:
+                getDockActivity().replaceDockableFragment(AddCreditFragment.newInstance(), "AddCreditFragment");
+                break;
+            case R.id.ll_accountOverview:
+                getDockActivity().replaceDockableFragment(AccountOverviewFragment.newInstance(), "AccountOverviewFragment");
+                break;
+            case R.id.ll_transponders:
+                getDockActivity().replaceDockableFragment(TransponderListFragment.newInstance(), "TransponderListFragment");
+                break;
+            case R.id.ll_vehicles:
+                getDockActivity().replaceDockableFragment(VehicleOverviewFragment.newInstance(), "VehicleOverviewFragment");
+                break;
+            case R.id.ll_paymentOptions:
+                getDockActivity().replaceDockableFragment(PaymentOptionsFragment.newInstance(), "PaymentOptionsFragment");
+                break;
+            case R.id.ll_userInfo:
+                getDockActivity().replaceDockableFragment(AccountOverviewFragment.newInstance(), "AccountOverviewFragment");
+                break;
+        }
     }
 }

@@ -176,7 +176,7 @@ public class AddVehicleFragment extends BaseFragment {
                 break;
             case R.id.btn_submit:
                 if (validate()) {
-
+                    getDockActivity().popFragment();
                 }
                 break;
         }

@@ -23,9 +23,7 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * Created on 9/7/2017.
- */
+
 
 public class CardListFragment extends BaseFragment {
     @BindView(R.id.listView_card)
@@ -96,7 +94,7 @@ public class CardListFragment extends BaseFragment {
                 Dialog dialog = DialogFactory.createMessageDialog2(getDockActivity(), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        UIHelper.showShortToastInCenter(getDockActivity(), "Has to be Implemented");
+                        getDockActivity().replaceDockableFragment(AddCreditsTabFragment.newInstance(true), "AddCreditsTabFragment");
                     }
                 }, getString(R.string.edit_message), getString(R.string.edit_item_card), R.drawable.app_icon);
                 dialog.show();
@@ -114,7 +112,7 @@ public class CardListFragment extends BaseFragment {
         titleBar.showAddButton(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                UIHelper.showShortToastInCenter(getDockActivity(), "has to be implemented");
+                getDockActivity().replaceDockableFragment(AddCreditFragment.newInstance(), "AddCreditFragment");
             }
         });
         titleBar.setSubHeading(getString(R.string.card_list));

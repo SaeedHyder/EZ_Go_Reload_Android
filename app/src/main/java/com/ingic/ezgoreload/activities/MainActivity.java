@@ -139,6 +139,10 @@ public class MainActivity extends DockActivity implements OnClickListener {
         }
     }
 
+    public ResideMenu getResideMenu() {
+        return resideMenu;
+    }
+
     private void setMenuItemDirection(String direction) {
 
         if (direction.equals(SideMenuDirection.LEFT.getValue())) {

@@ -91,7 +91,7 @@ public class VehicleOverviewFragment extends BaseFragment implements ListItemCli
         titleBar.showAddButton(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                getDockActivity().replaceDockableFragment(AddVehicleFragment.newInstance(), "AddVehicleFragment");
             }
         });
 

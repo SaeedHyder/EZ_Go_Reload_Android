@@ -10,9 +10,7 @@ import com.ingic.ezgoreload.fragments.abstracts.BaseFragment;
 
 import butterknife.ButterKnife;
 
-/**
- * Created on 9/8/2017.
- */
+
 
 public class PaymentHistoryFragment extends BaseFragment{
     public static PaymentHistoryFragment newInstance() {
