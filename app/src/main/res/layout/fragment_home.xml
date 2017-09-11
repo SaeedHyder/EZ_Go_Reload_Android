@@ -68,7 +68,7 @@
                     android:layout_marginTop="@dimen/x2"
                     android:alpha="0.9"
                     android:gravity="center"
-                    android:text="@string/add_credits"
+                    android:text="@string/adds_credits"
                     android:textColor="@color/black"
                     app:typeface="Roboto-Regular.ttf" />
 

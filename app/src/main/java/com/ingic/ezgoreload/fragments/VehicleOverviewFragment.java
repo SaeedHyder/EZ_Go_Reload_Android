@@ -32,7 +32,7 @@ public class VehicleOverviewFragment extends BaseFragment implements ListItemCli
     @BindView(R.id.listView_card)
     ListView listViewCard;
     private ArrayListAdapter<TransponderEnt> mAdapter;
-    
+
     private ArrayList<TransponderEnt> cardcollection;
 
     public static VehicleOverviewFragment newInstance() {

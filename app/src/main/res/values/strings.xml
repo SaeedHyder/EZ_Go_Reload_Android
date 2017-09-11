@@ -183,6 +183,7 @@
     <string name="pay">Pay</string>
     <string name="_45">$45</string>
     <string name="total_payment">Total Payment</string>
+    <string name="adds_credits">Add Credits</string>
 
 
 </resources>
