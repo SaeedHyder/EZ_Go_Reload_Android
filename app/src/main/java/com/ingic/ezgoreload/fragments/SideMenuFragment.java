@@ -1,5 +1,7 @@
 package com.ingic.ezgoreload.fragments;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -8,6 +10,7 @@ import android.view.ViewGroup;
 
 import com.ingic.ezgoreload.R;
 import com.ingic.ezgoreload.fragments.abstracts.BaseFragment;
+import com.ingic.ezgoreload.ui.dialogs.DialogFactory;
 import com.ingic.ezgoreload.ui.views.AnyTextView;
 import com.ingic.ezgoreload.ui.views.TitleBar;
 
@@ -106,9 +109,15 @@ public class SideMenuFragment extends BaseFragment {
                 closeMenu();
                 break;
             case R.id.btn_logout:
-                prefHelper.setLoginStatus(false);
-                getDockActivity().popBackStackTillEntry(0);
-                getDockActivity().replaceDockableFragment(LoginFragment.newInstance(), "LoginFragment");
+                Dialog dialog = DialogFactory.createMessageDialog2(getDockActivity(), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        prefHelper.setLoginStatus(false);
+                        getDockActivity().popBackStackTillEntry(0);
+                        getDockActivity().replaceDockableFragment(LoginFragment.newInstance(), "LoginFragment");
+                    }
+                }, "Do you want to Logout ?", "Logout User", R.drawable.app_icon);
+                dialog.show();
                 closeMenu();
                 break;
         }
