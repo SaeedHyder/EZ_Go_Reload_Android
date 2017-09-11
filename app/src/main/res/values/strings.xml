@@ -112,7 +112,7 @@
     <string name="card_list">Credit Card List</string>
 
     <string name="welcome_to_our_app">Welcome to our app!</string>
-    <string name="add_credits">Add Credits</string>
+    <string name="add_credits">Account Credits</string>
     <string name="account_overview">Account\nOverview</string>
     <string name="vehicles">Vehicles</string>
     <string name="payment_options">Payment\nOptions</string>
