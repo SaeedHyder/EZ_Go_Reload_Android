@@ -5,11 +5,14 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.ingic.ezgoreload.R;
 import com.ingic.ezgoreload.entities.TransponderEnt;
@@ -109,6 +112,15 @@ public class TransponderListFragment extends BaseFragment implements ListItemCli
 
                     }
                 });
+            }
+        });
+        titleBar.getSearchView().setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_SEARCH){
+                    UIHelper.hideSoftKeyboard(getDockActivity(),titleBar.getSearchView());
+                }
+                return true;
             }
         });
         titleBar.setSubHeading(getString(R.string.transponder_list));

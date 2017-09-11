@@ -92,7 +92,7 @@
     <string name="enter_valid_username">Enter Valid User Name</string>
     <string name="enter_Pin">Enter Pin</string>
     <string name="pinlenght">Enter Valid Pin</string>
-    <string name="reset_pin_message">Reset Pin has benn send to your Email Address</string>
+    <string name="reset_pin_message">Reset pin has been sent to your email address.</string>
     <string name="reset_pin">Reset Pin</string>
 
     <string name="plate">Plate #</string>

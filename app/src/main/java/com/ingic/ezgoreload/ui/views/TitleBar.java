@@ -68,6 +68,9 @@ public class TitleBar extends RelativeLayout {
 		inflater.inflate(R.layout.header_main, this);
 		bindViews();
 	}
+	public AnyEditTextView getSearchView(){
+		return searchView;
+	}
 
 	public void hideButtons() {
 		txtTitle.setVisibility(View.GONE);

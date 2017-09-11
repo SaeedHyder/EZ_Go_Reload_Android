@@ -14,6 +14,8 @@
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:layout_marginLeft="@dimen/x10"
+        android:paddingStart="@dimen/x10"
+        android:paddingEnd="@dimen/x10"
         android:scaleType="fitXY"
         android:src="@drawable/ic_launcher"
         android:visibility="visible" />
@@ -38,6 +40,8 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="@dimen/x10"
+        android:paddingStart="@dimen/x10"
+        android:paddingEnd="@dimen/x10"
         android:src="@drawable/ic_launcher"
         android:visibility="visible" />
 
@@ -63,7 +67,7 @@
         android:textColorHint="@color/black"
         android:textSize="@dimen/x15"
         app:typeface="OpenSans-Regular.ttf"
-        android:visibility="visible"/>
+        android:visibility="gone"/>
 
     <RelativeLayout
         android:id="@+id/rl_balance"

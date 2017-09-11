@@ -14,11 +14,9 @@ import com.ingic.ezgoreload.ui.views.TitleBar;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SideMenuFragment extends BaseFragment {
-
 
 
     @BindView(R.id.img_profile)
@@ -41,7 +39,6 @@ public class SideMenuFragment extends BaseFragment {
     AnyTextView btnLogout;
 
 
-
     public static SideMenuFragment newInstance() {
         return new SideMenuFragment();
 
@@ -60,7 +57,7 @@ public class SideMenuFragment extends BaseFragment {
         View view = inflater.inflate(R.layout.fragment_sidemenu, container, false);
 
 
-         ButterKnife.bind(this, view);
+        ButterKnife.bind(this, view);
         return view;
 
     }
@@ -78,33 +75,41 @@ public class SideMenuFragment extends BaseFragment {
         titleBar.hideTitleBar();
     }
 
-   /* public void closeMenu() {
+    public void closeMenu() {
         getMainActivity().getResideMenu().closeMenu();
-    }*/
+    }
 
     @OnClick({R.id.btn_home, R.id.btn_acount, R.id.btn_transponder, R.id.btn_payment, R.id.btn_userinfo, R.id.btn_logout})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_home:
+                getDockActivity().popBackStackTillEntry(0);
                 getDockActivity().replaceDockableFragment(HomeFragment.newInstance(), "HomeFragment");
+                closeMenu();
 
                 break;
             case R.id.btn_acount:
+
                 getDockActivity().replaceDockableFragment(AccountOverviewFragment.newInstance(), "AccountOverviewFragment");
-              break;
+                closeMenu();
+                break;
             case R.id.btn_transponder:
                 getDockActivity().replaceDockableFragment(TransponderListFragment.newInstance(), "TransponderListFragment");
+                closeMenu();
                 break;
             case R.id.btn_payment:
                 getDockActivity().replaceDockableFragment(PaymentOptionsFragment.newInstance(), "PaymentOptionsFragment");
+                closeMenu();
                 break;
             case R.id.btn_userinfo:
                 getDockActivity().replaceDockableFragment(UserProfileFragment.newInstance(), "UserProfileFragment");
+                closeMenu();
                 break;
             case R.id.btn_logout:
                 prefHelper.setLoginStatus(false);
                 getDockActivity().popBackStackTillEntry(0);
                 getDockActivity().replaceDockableFragment(LoginFragment.newInstance(), "LoginFragment");
+                closeMenu();
                 break;
         }
     }

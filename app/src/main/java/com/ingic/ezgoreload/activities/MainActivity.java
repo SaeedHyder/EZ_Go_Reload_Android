@@ -29,14 +29,14 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends DockActivity implements OnClickListener {
     public TitleBar titleBar;
+    @BindView(R.id.sideMneuFragmentContainer)
+    public FrameLayout sideMneuFragmentContainer;
     @BindView(R.id.header_main)
     TitleBar header_main;
     @BindView(R.id.mainFrameLayout)
     FrameLayout mainFrameLayout;
     @BindView(R.id.progressBar)
     ProgressBar progressBar;
-    @BindView(R.id.sideMneuFragmentContainer)
-    public FrameLayout sideMneuFragmentContainer;
     private MainActivity mContext;
     private boolean loading;
 
@@ -56,8 +56,8 @@ public class MainActivity extends DockActivity implements OnClickListener {
         // setBehindContentView(R.layout.fragment_frame);
         mContext = this;
         Log.i("Screen Density", ScreenHelper.getDensity(this) + "");
-
-        sideMenuType = SideMenuChooser.DRAWER.getValue();
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        sideMenuType = SideMenuChooser.RESIDE_MENU.getValue();
         sideMenuDirection = SideMenuDirection.LEFT.getValue();
 
         settingSideMenu(sideMenuType, sideMenuDirection);
@@ -66,14 +66,14 @@ public class MainActivity extends DockActivity implements OnClickListener {
 
             @Override
             public void onClick(View v) {
-                if (getDrawerLayout() != null) {
-                    if(sideMenuDirection.equals(SideMenuDirection.LEFT.getValue())) {
+                if (sideMenuType.equals(SideMenuChooser.DRAWER.getValue()) && getDrawerLayout() != null) {
+                    if (sideMenuDirection.equals(SideMenuDirection.LEFT.getValue())) {
                         drawerLayout.openDrawer(Gravity.LEFT);
-                    }
-                    else{
+                    } else {
                         drawerLayout.openDrawer(Gravity.RIGHT);
                     }
                 } else {
+
                     resideMenu.openMenu(sideMenuDirection);
                 }
 
@@ -121,7 +121,6 @@ public class MainActivity extends DockActivity implements OnClickListener {
                 params.gravity = Gravity.RIGHT;
                 sideMneuFragmentContainer.setLayoutParams(params);
             }
-            drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
             sideMenuFragment = SideMenuFragment.newInstance();
             FragmentTransaction transaction = getSupportFragmentManager()
@@ -130,6 +129,7 @@ public class MainActivity extends DockActivity implements OnClickListener {
 
             drawerLayout.closeDrawers();
         } else {
+
             resideMenu = new ResideMenu(this);
             resideMenu.attachToActivity(this);
             resideMenu.setMenuListener(getMenuListener());
@@ -149,12 +149,13 @@ public class MainActivity extends DockActivity implements OnClickListener {
 
             SideMenuFragment leftSideMenuFragment = SideMenuFragment.newInstance();
             resideMenu.addMenuItem(leftSideMenuFragment, "LeftSideMenuFragment", direction);
+            resideMenu.closeMenu();
 
         } else if (direction.equals(SideMenuDirection.RIGHT.getValue())) {
 
             SideMenuFragment rightSideMenuFragment = SideMenuFragment.newInstance();
             resideMenu.addMenuItem(rightSideMenuFragment, "RightSideMenuFragment", direction);
-
+            resideMenu.closeMenu();
         }
 
     }
@@ -173,6 +174,7 @@ public class MainActivity extends DockActivity implements OnClickListener {
             replaceDockableFragment(LoginFragment.newInstance(), "LoginFragment");
         }
     }
+
     private FragmentManager.OnBackStackChangedListener getListener() {
         FragmentManager.OnBackStackChangedListener result = new FragmentManager.OnBackStackChangedListener() {
             public void onBackStackChanged() {
@@ -244,12 +246,15 @@ public class MainActivity extends DockActivity implements OnClickListener {
 
     @Override
     public void onBackPressed() {
-        if (loading) {
-            UIHelper.showLongToastInCenter(getApplicationContext(),
-                    R.string.message_wait);
-        } else
-            super.onBackPressed();
-
+        if (resideMenu != null && resideMenu.isOpened()) {
+            resideMenu.closeMenu();
+        } else {
+            if (loading) {
+                UIHelper.showLongToastInCenter(getApplicationContext(),
+                        R.string.message_wait);
+            } else
+                super.onBackPressed();
+        }
     }
 
     @Override

@@ -5,16 +5,17 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.widget.DatePicker;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.ingic.ezgoreload.R;
 import com.ingic.ezgoreload.entities.PaymentHistoryEnt;
-import com.ingic.ezgoreload.entities.TransponderEnt;
 import com.ingic.ezgoreload.fragments.abstracts.BaseFragment;
 import com.ingic.ezgoreload.helpers.UIHelper;
 import com.ingic.ezgoreload.ui.adapters.ArrayListAdapter;
@@ -32,7 +33,6 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
-
 public class PaymentHistoryFragment extends BaseFragment {
     @BindView(R.id.txt_start_date)
     AnyTextView txtStartDate;
@@ -45,6 +45,7 @@ public class PaymentHistoryFragment extends BaseFragment {
     private String EndDate;
     private ArrayListAdapter<PaymentHistoryEnt> mAdapter;
     private ArrayList<PaymentHistoryEnt> historycollection;
+
     public static PaymentHistoryFragment newInstance() {
         return new PaymentHistoryFragment();
     }
@@ -52,7 +53,7 @@ public class PaymentHistoryFragment extends BaseFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mAdapter = new ArrayListAdapter<PaymentHistoryEnt>(getDockActivity(),new PaymentHistoryBinder());
+        mAdapter = new ArrayListAdapter<PaymentHistoryEnt>(getDockActivity(), new PaymentHistoryBinder());
     }
 
     @Override
@@ -74,7 +75,7 @@ public class PaymentHistoryFragment extends BaseFragment {
     private void bindData() {
         historycollection = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            historycollection.add(new PaymentHistoryEnt("13-28-17","8:48 am","xyz","10$","290$"));
+            historycollection.add(new PaymentHistoryEnt("13-28-17", "8:48 am", "xyz", "10$", "290$"));
 
         }
         bindView(historycollection);
@@ -157,6 +158,15 @@ public class PaymentHistoryFragment extends BaseFragment {
 
                     }
                 });
+            }
+        });
+        titleBar.getSearchView().setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_SEARCH){
+                    UIHelper.hideSoftKeyboard(getDockActivity(),titleBar.getSearchView());
+                }
+                    return true;
             }
         });
         titleBar.setSubHeading(getString(R.string.payment_history));

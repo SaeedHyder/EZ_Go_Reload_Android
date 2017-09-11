@@ -207,7 +207,7 @@ public class AddVehicleFragment extends BaseFragment {
         } else if (checkRentalVehicle.isChecked() && btnEnddate.getText().toString().isEmpty()) {
             UIHelper.showShortToastInCenter(getDockActivity(), "Enter End Date");
             return false;
-        } else if (Integer.parseInt(edtyear.getText().toString()) > new Date().getYear()) {
+        } else if (Integer.parseInt(edtyear.getText().toString()) > Calendar.getInstance().get(Calendar.YEAR)) {
             edtyear.setError("Enter Correct Year");
             return false;
         } else {
