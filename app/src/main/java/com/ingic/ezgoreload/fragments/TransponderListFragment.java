@@ -127,12 +127,12 @@ public class TransponderListFragment extends BaseFragment implements ListItemCli
 
     @Override
     public void onClickListener(Object entity, int position) {
-        Dialog dialog = DialogFactory.createMessageDialog2(getDockActivity(), new DialogInterface.OnClickListener() {
+     /*   Dialog dialog = DialogFactory.createMessageDialog2(getDockActivity(), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 UIHelper.showShortToastInCenter(getDockActivity(), "Has to be Implemented");
             }
         }, getString(R.string.edit_message), getString(R.string.edit_item_transponder), R.drawable.app_icon);
-        dialog.show();
+        dialog.show();*/
     }
 }

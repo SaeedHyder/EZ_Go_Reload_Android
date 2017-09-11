@@ -100,12 +100,12 @@ public class AddVehicleFragment extends BaseFragment {
         super.setTitleBar(titleBar);
         titleBar.hideButtons();
         titleBar.showBackButton();
-        titleBar.showUserButton(new View.OnClickListener() {
+       /* titleBar.showUserButton(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 UIHelper.showShortToastInCenter(getDockActivity(), "has to be implemented");
             }
-        });
+        });*/
         titleBar.setSubHeading(getString(R.string.add_vehicle));
     }
 
@@ -206,6 +206,9 @@ public class AddVehicleFragment extends BaseFragment {
             return false;
         } else if (checkRentalVehicle.isChecked() && btnEnddate.getText().toString().isEmpty()) {
             UIHelper.showShortToastInCenter(getDockActivity(), "Enter End Date");
+            return false;
+        } else if (Integer.parseInt(edtyear.getText().toString()) > new Date().getYear()) {
+            edtyear.setError("Enter Correct Year");
             return false;
         } else {
             return true;

@@ -31,7 +31,8 @@
             android:text="$450"
             android:textSize="@dimen/x18"
             android:textColor="@color/blue_credit"
-            app:typeface="Roboto-Regular.ttf"
+            android:textStyle="bold"
+            app:typeface="Roboto-Bold.ttf"
             android:gravity="center"
             android:layout_gravity="center"
             android:layout_weight="0.2"/>

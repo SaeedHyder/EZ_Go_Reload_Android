@@ -50,7 +50,7 @@
     <LinearLayout
         android:id="@+id/ll_home"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x40"
+        android:layout_height="@dimen/x55"
         android:layout_marginTop="@dimen/x25"
         android:background="@drawable/bottom_line_nav"
         android:orientation="horizontal">
@@ -84,7 +84,7 @@
     <LinearLayout
         android:id="@+id/ll_account"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x40"
+        android:layout_height="@dimen/x55"
         android:background="@drawable/bottom_line_nav"
         android:orientation="horizontal">
 
@@ -117,7 +117,7 @@
     <LinearLayout
         android:id="@+id/ll_transponders"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x40"
+        android:layout_height="@dimen/x55"
         android:background="@drawable/bottom_line_nav"
         android:orientation="horizontal">
 
@@ -150,7 +150,7 @@
     <LinearLayout
         android:id="@+id/ll_paymentOptions"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x40"
+        android:layout_height="@dimen/x55"
 
         android:background="@drawable/bottom_line_nav"
         android:orientation="horizontal">
@@ -184,7 +184,7 @@
     <LinearLayout
         android:id="@+id/ll_userInfo"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x40"
+        android:layout_height="@dimen/x55"
 
         android:background="@drawable/bottom_line_nav"
         android:orientation="horizontal">
@@ -218,7 +218,7 @@
     <LinearLayout
         android:id="@+id/ll_logout"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x40"
+        android:layout_height="@dimen/x55"
 
         android:background="@drawable/bottom_line_nav"
         android:orientation="horizontal">

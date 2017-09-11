@@ -57,7 +57,7 @@ public class MainActivity extends DockActivity implements OnClickListener {
         mContext = this;
         Log.i("Screen Density", ScreenHelper.getDensity(this) + "");
 
-        sideMenuType = SideMenuChooser.RESIDE_MENU.getValue();
+        sideMenuType = SideMenuChooser.DRAWER.getValue();
         sideMenuDirection = SideMenuDirection.LEFT.getValue();
 
         settingSideMenu(sideMenuType, sideMenuDirection);

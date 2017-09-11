@@ -114,7 +114,7 @@ public class VehicleOverviewFragment extends BaseFragment implements ListItemCli
         Dialog dialog = DialogFactory.createMessageDialog2(getDockActivity(), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                UIHelper.showShortToastInCenter(getDockActivity(), "Has to be Implemented");
+                getDockActivity().replaceDockableFragment(AddVehicleFragment.newInstance(), "AddVehicleFragment");
             }
         }, getString(R.string.edit_message), getString(R.string.edit_item), R.drawable.app_icon);
         dialog.show();
