@@ -16,7 +16,7 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 
-public class HomeFragment extends BaseFragment {
+public class HomeFragment extends BaseFragment implements View.OnClickListener{
 
 
     @BindView(R.id.ll_addCredit)
@@ -55,7 +55,11 @@ public class HomeFragment extends BaseFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getDockActivity().replaceDockableFragment(CardListFragment.newInstance(),"asd");
+      //  getDockActivity().replaceDockableFragment(CardListFragment.newInstance(),"asd");
+        setListners();
+    }
+
+    private void setListners() {
     }
 
 
@@ -70,4 +74,8 @@ public class HomeFragment extends BaseFragment {
     }
 
 
+    @Override
+    public void onClick(View v) {
+        
+    }
 }

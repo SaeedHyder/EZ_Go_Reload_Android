@@ -43,6 +43,12 @@ public class PaymentOptionsFragment extends BaseFragment  {
         super.setTitleBar(titleBar);
         titleBar.hideButtons();
         titleBar.showBackButton();
+        titleBar.showUserButton(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
         titleBar.setSubHeading(getString(R.string.payment_method));
 
     }
