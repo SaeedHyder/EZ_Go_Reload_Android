@@ -92,7 +92,7 @@
     <string name="enter_valid_username">Enter Valid User Name</string>
     <string name="enter_Pin">Enter Pin</string>
     <string name="pinlenght">Enter Valid Pin</string>
-    <string name="reset_pin_message">Reset Pin has benn send to your Email Address</string>
+    <string name="reset_pin_message">Reset pin has been sent to your email address.</string>
     <string name="reset_pin">Reset Pin</string>
 
     <string name="plate">Plate #</string>
@@ -112,17 +112,78 @@
     <string name="card_list">Credit Card List</string>
 
     <string name="welcome_to_our_app">Welcome to our app!</string>
-    <string name="add_credits">Add Credits</string>
+    <string name="add_credits">Account Credits</string>
     <string name="account_overview">Account\nOverview</string>
     <string name="vehicles">Vehicles</string>
     <string name="payment_options">Payment\nOptions</string>
     <string name="user_info">User Info</string>
     <string name="transponders">Transponders</string>
+
+    <string name="add_credit">Add Credits</string>
+    <string name="top_up_amount">Top Up Amount</string>
+    <string name="recharge_account">Recharge Account</string>
+    <string name="user_profile">User Profile</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="country">Country</string>
+    <string name="zip_code">Zip Code</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="mobile">Mobile</string>
+    <string name="recieve_receipts_and_newsletter_on_email">Recieve Receipts and Newsletter on Email</string>
+    <string name="send_monthly_billing_statements">Send Monthly Billing Statements</string>
+    <string name="name">Name</string>
+    <string name="signup">Signup</string>
+
     <string name="payment_method">Payment Method</string>
     <string name="Account_Overview">Account Overview</string>
     <string name="Home">Home</string>
     <string name="payment_history">Payment History</string>
-    <string name="user_profile">User Profile</string>
+
+    <string name="delete_card_message">Do you want to delete this Credit Card</string>
+    <string name="delete_card">Delete Credit Card</string>
+    <string name="transponders_nid">Transponders \n ID</string>
+    <string name="selected_name">Selected \n Name</string>
+    <string name="transponders_status">Transponders \n Status</string>
+    <string name="transponder_list">Transponders</string>
+    <string name="delete_Transponder_message">Do you want to delete this Transponder</string>
+    <string name="delete_transponder">Delete Transponder</string>
+    <string name="search">Search</string>
+    <string name="paymentoptions">Payment Options</string>
+    <string name="user_information">User Information</string>
+    <string name="logout">Logout</string>
+    <string name="vehicle_overview">Vehicle\'s Overview</string>
+    <string name="delete_vehicle_message">Do you want to delete this Vehicle</string>
+    <string name="delete_vehicle">Delete Vehicle</string>
+    <string name="vehicle_name">Vehicle Name</string>
+    <string name="credit_used">Credit Used</string>
+    <string name="status">Status</string>
+    <string name="edit_message">Do you want to Edit</string>
+    <string name="edit_item">Edit Vehicle</string>
+    <string name="edit_item_transponder">Edit Transponder</string>
+    <string name="edit_item_card">Edit Credit Card</string>
+    <string name="credit_nleft">Credit\nLeft</string>
+    <string name="location">Location</string>
+    <string name="time">Time</string>
+    <string name="date">Date</string>
+    <string name="charged_credit">Charged\nCredit</string>
+    <string name="select_date_range">Select Date Range</string>
+
+    <string name="pay_by_new_card">Pay by New Card</string>
+    <string name="pay_by_existing_card">Pay by Existing Card</string>
+    <string name="card_number">Card Number</string>
+    <string name="name_on_card">Name on Card</string>
+    <string name="cvv2_code">CVV2 Code</string>
+    <string name="expiration_date">Expiration Date</string>
+    <string name="replace_credit_card_on_payment">Replace Credit Card on Payment</string>
+    <string name="submit">Submit</string>
+    <string name="card_1">Card-1</string>
+    <string name="card_2">Card-2</string>
+    <string name="card_3">Card-3</string>
+    <string name="pay">Pay</string>
+    <string name="_45">$45</string>
+    <string name="total_payment">Total Payment</string>
+    <string name="adds_credits">Add Credits</string>
 
 
 </resources>

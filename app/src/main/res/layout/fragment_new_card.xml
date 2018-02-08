@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?android:windowBackground"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x20"
+        android:layout_marginTop="@dimen/x5"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_card_number"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x20"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x10"
+            android:contentDescription=""
+            android:src="@drawable/card"
+            tools:ignore="ContentDescription" />
+
+        <com.ingic.ezgoreload.ui.views.AnyEditTextView
+            android:id="@+id/edt_card_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x12"
+            android:alpha="0.8"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:hint="@string/card_number"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="16"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/x5"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x20"
+        android:alpha="0.8"
+        android:background="@drawable/bottom_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x20"
+        android:layout_marginTop="@dimen/x5"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_name_on_card"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x20"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x10"
+            android:contentDescription=""
+            android:src="@drawable/name_icon"
+            tools:ignore="ContentDescription" />
+
+        <com.ingic.ezgoreload.ui.views.AnyEditTextView
+            android:id="@+id/edt_name_on_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x12"
+            android:alpha="0.8"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:hint="@string/name_on_card"
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/x5"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x20"
+        android:alpha="0.8"
+        android:background="@drawable/bottom_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x20"
+        android:layout_marginTop="@dimen/x5"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_cvv"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x20"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x10"
+            android:contentDescription=""
+            android:src="@drawable/ccv"
+            tools:ignore="ContentDescription" />
+
+        <com.ingic.ezgoreload.ui.views.AnyEditTextView
+            android:id="@+id/edt_cvv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x12"
+            android:alpha="0.8"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:hint="@string/cvv2_code"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/x5"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x20"
+        android:alpha="0.8"
+        android:background="@drawable/bottom_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x20"
+        android:layout_marginTop="@dimen/x5"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_zip_code"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x20"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x10"
+            android:contentDescription=""
+            android:src="@drawable/zip"
+            tools:ignore="ContentDescription" />
+
+        <com.ingic.ezgoreload.ui.views.AnyEditTextView
+            android:id="@+id/edt_zip_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x12"
+            android:alpha="0.8"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:hint="@string/zip_code"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/x5"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x20"
+        android:alpha="0.8"
+        android:background="@drawable/bottom_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x20"
+        android:layout_marginTop="@dimen/x5"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_exp_date"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x20"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x10"
+            android:contentDescription=""
+            android:src="@drawable/date"
+            tools:ignore="ContentDescription" />
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/tv_exp_date"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/x12"
+            android:alpha="0.8"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:text="@string/expiration_date"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/x5"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_marginRight="@dimen/x20"
+        android:alpha="0.8"
+        android:background="@drawable/bottom_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/rb_replace_credit_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x10"
+                android:text="@string/replace_credit_card_on_payment"
+                android:textColor="@color/black"
+                android:alpha="0.6"
+                android:textSize="@dimen/x14"
+                android:paddingLeft="@dimen/x10"
+                android:layout_marginRight="@dimen/x5"
+                android:button="@drawable/radio_button_selector"
+                android:checked="false"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/x15"
+        android:layout_marginTop="@dimen/x15"
+        android:layout_marginLeft="@dimen/x40"
+        android:layout_marginRight="@dimen/x40"
+        android:background="@drawable/button_rect_blue"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</LinearLayout>

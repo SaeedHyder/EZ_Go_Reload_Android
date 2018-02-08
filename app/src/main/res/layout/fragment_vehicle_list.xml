@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="?android:windowBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x55"
+        android:orientation="horizontal"
+        android:background="@color/color_list_header"
+        android:gravity="center">
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/txt_Snumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:alpha="0.8"
+            android:gravity="center"
+            android:hint="@string/vehicle_name"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/txt_card_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:alpha="0.8"
+            android:gravity="center"
+            android:hint="@string/credit_used"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/txt_card_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:alpha="0.8"
+            android:gravity="center"
+            android:hint="@string/status"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/listView_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

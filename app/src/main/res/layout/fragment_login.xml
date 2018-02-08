@@ -5,6 +5,7 @@
     android:id="@+id/scrollview_bigdaddy"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?android:windowBackground"
     android:fillViewport="true"
     android:scrollbars="none">
 
@@ -104,8 +105,8 @@
                 android:background="@color/transparent"
                 android:gravity="center_vertical"
                 android:hint="@string/pin"
-                android:imeOptions="actionNext"
-                android:inputType="number"
+                android:imeOptions="actionDone"
+                android:inputType="numberPassword"
                 android:maxLength="4"
                 android:maxLines="1"
                 android:singleLine="true"
@@ -193,7 +194,7 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-             <ImageView
+            <ImageView
                 android:id="@+id/btn_fb"
                 android:layout_width="@dimen/x30"
                 android:layout_height="@dimen/x30"

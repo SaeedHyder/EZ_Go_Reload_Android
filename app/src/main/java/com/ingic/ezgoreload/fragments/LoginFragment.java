@@ -76,6 +76,7 @@ public class LoginFragment extends BaseFragment {
                 }
                 break;
             case R.id.btn_register:
+                getDockActivity().replaceDockableFragment(SignupFragment.newInstance(), "SignupFragment");
                 break;
             case R.id.txt_reset_pin:
                 UIHelper.showAlertDialog(getString(R.string.reset_pin_message),getString(R.string.reset_pin),getDockActivity());

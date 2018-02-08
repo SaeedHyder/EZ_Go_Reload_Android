@@ -26,14 +26,20 @@
     <color name="lite_purple">#9C94A3</color>
     <color name="gray_dark">#929292</color>
 
+    <!--CreditCardScreen-->
+    <color name="blue_credit">#0A5F9E</color>
+    <color name="black_credit">#2B2B2B</color>
+    <color name="blue_tab">#0B456F</color>
+    <color name="tab_line">#67C4FF</color>
+
 
 
     <!-- App specific colors -->
     <color name="forgot_pass_color">#BB4000</color>
     <color name="notification_date_color">#D15801</color>
     <color name="text_color">#654F76</color>
-    
-    
+
+
     <color name="color_rbtn">#0E8593</color>
     <color name="holo_blue">#FF33B5E5</color>
     <color name="progress_start">#B31025</color>
@@ -45,9 +51,11 @@
     <color name="bottom_line_color">#434343</color>
 
     <color name="color_list_header">#E8E8E8</color>
-
+    <color name="list_inactive_background">#F9F8F8</color>
     <color name="homeLineColor">#AEAEAE</color>
     <color name="headerColor">#1365A1</color>
     <color name="green">#B8DE52</color>
+    <color name="sidemenu_blue">#053B63</color>
+    <color name="nav_line">#1C4B6D</color>
 
 </resources>

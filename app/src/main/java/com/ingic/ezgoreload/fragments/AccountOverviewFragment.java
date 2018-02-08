@@ -5,18 +5,23 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.ingic.ezgoreload.R;
 import com.ingic.ezgoreload.fragments.abstracts.BaseFragment;
 import com.ingic.ezgoreload.ui.views.TitleBar;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-/**
- * Created by saeedhyder on 9/7/2017.
- */
 
 public class AccountOverviewFragment extends BaseFragment {
+
+    @BindView(R.id.ll_payment_history)
+    LinearLayout llPaymentHistory;
+    @BindView(R.id.ll_userProfile)
+    LinearLayout llUserProfile;
 
     public static AccountOverviewFragment newInstance() {
         return new AccountOverviewFragment();
@@ -45,5 +50,22 @@ public class AccountOverviewFragment extends BaseFragment {
         titleBar.showBackButton();
         titleBar.setSubHeading(getString(R.string.Account_Overview));
 
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+    }
+
+    @OnClick({R.id.ll_payment_history, R.id.ll_userProfile})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.ll_payment_history:
+                getDockActivity().replaceDockableFragment(PaymentHistoryFragment.newInstance(), "PaymentHistoryFragment");
+                break;
+            case R.id.ll_userProfile:
+                getDockActivity().replaceDockableFragment(UserProfileFragment.newInstance(), "UserProfileFragment");
+                break;
+        }
     }
 }

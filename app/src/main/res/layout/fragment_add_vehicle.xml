@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?android:windowBackground"
     android:orientation="vertical">
 
     <LinearLayout
@@ -26,7 +27,7 @@
             android:gravity="center_vertical"
             android:hint="@string/plate"
             android:imeOptions="actionNext"
-            android:inputType="textMultiLine"
+            android:inputType="textCapCharacters"
             android:maxLength="20"
             android:maxLines="1"
             android:paddingEnd="@dimen/x5"
@@ -71,7 +72,7 @@
             android:gravity="center_vertical"
             android:hint="@string/fl"
             android:imeOptions="actionNext"
-            android:inputType="textMultiLine"
+            android:inputType="textCapWords"
             android:maxLength="30"
             android:maxLines="1"
             android:paddingEnd="@dimen/x5"
@@ -104,7 +105,7 @@
             android:gravity="center_vertical"
             android:hint="@string/make"
             android:imeOptions="actionNext"
-            android:inputType="textMultiLine"
+            android:inputType="textCapWords"
             android:maxLength="30"
             android:maxLines="1"
             android:paddingEnd="@dimen/x5"
@@ -127,7 +128,7 @@
             android:gravity="center_vertical"
             android:hint="@string/moel"
             android:imeOptions="actionNext"
-            android:inputType="textMultiLine"
+            android:inputType="textCapWords"
             android:maxLength="30"
             android:maxLines="1"
             android:paddingEnd="@dimen/x5"
@@ -149,7 +150,7 @@
             android:gravity="center_vertical"
             android:hint="@string/color"
             android:imeOptions="actionDone"
-            android:inputType="textMultiLine"
+            android:inputType="textCapWords"
             android:maxLength="30"
             android:maxLines="1"
             android:paddingEnd="@dimen/x5"
@@ -171,6 +172,7 @@
         android:orientation="horizontal">
 
         <CheckBox
+            android:id="@+id/check_own_vehicle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -178,14 +180,15 @@
             android:paddingLeft="@dimen/x10"
             android:textSize="@dimen/x15"
             android:text="@string/own_vehicle"
+            android:checked="true"
             android:textColor="@color/dark_grey" />
 
         <CheckBox
+            android:id="@+id/check_rental_vehicle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@drawable/cb_selector"
-            android:checked="true"
             android:paddingLeft="@dimen/x10"
             android:textSize="@dimen/x15"
             android:text="@string/rental_vehicle"
@@ -193,12 +196,15 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/date_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/x20"
         android:layout_marginStart="@dimen/x20"
         android:layout_marginTop="@dimen/x20"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
+
 
         <LinearLayout
             android:id="@+id/ll_startdate"
@@ -256,7 +262,8 @@
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
                 android:textSize="@dimen/x15"
-                app:typeface="Roboto-Regular.ttf" />
+                app:typeface="Roboto-Regular.ttf"
+                />
 
             <ImageView
                 android:id="@+id/iv_enddate"

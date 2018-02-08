@@ -2,11 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="?android:windowBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x40"
+        android:layout_height="@dimen/x55"
         android:orientation="horizontal"
         android:background="@color/color_list_header"
         android:gravity="center">
@@ -18,7 +19,7 @@
             android:alpha="0.8"
             android:gravity="center"
             android:hint="@string/no"
-            android:paddingStart="@dimen/x10"
+
             android:textColor="@color/black"
 
             android:textColorHint="@color/black"
@@ -33,7 +34,7 @@
 
             android:gravity="center"
             android:hint="@string/credit_card"
-            android:paddingStart="@dimen/x10"
+
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             android:textSize="@dimen/x15"
@@ -46,7 +47,7 @@
             android:alpha="0.8"
             android:gravity="center"
             android:hint="Status"
-            android:paddingStart="@dimen/x10"
+
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             android:textSize="@dimen/x15"

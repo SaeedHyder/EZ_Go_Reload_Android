@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:windowBackground"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/x10"
+        android:layout_marginStart="@dimen/x10"
+        android:layout_marginTop="@dimen/x10"
+        android:orientation="horizontal">
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/x5"
+            android:alpha="0.8"
+            android:gravity="start"
+            android:text="@string/select_date_range"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/x16"
+            android:textStyle="bold"
+            app:typeface="Roboto-Bold.ttf" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x35"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rectangle_add_credit"
+            android:gravity="center">
+
+            <com.ingic.ezgoreload.ui.views.AnyTextView
+                android:id="@+id/txt_start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/x5"
+                android:text="10/31/13"
+                android:textSize="@dimen/x15"
+                app:typeface="Roboto-Regular.ttf" />
+
+        </LinearLayout>
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+
+            android:gravity="center"
+            android:text=" - "
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x35"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/rectangle_add_credit"
+
+            android:gravity="center">
+
+            <com.ingic.ezgoreload.ui.views.AnyTextView
+                android:id="@+id/txt_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/x5"
+                android:text="58/16/13"
+                android:textSize="@dimen/x15"
+                app:typeface="Roboto-Regular.ttf" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x55"
+        android:background="@color/color_list_header"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/txt_Snumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alpha="0.8"
+            android:gravity="center"
+            android:hint="@string/date"
+
+            android:textColor="@color/black"
+
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/txt_card_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alpha="0.8"
+
+            android:gravity="center"
+            android:hint="@string/time"
+
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/txt_card_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alpha="0.8"
+            android:gravity="center"
+            android:hint="@string/location"
+
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/txt_credit_charge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alpha="0.8"
+            android:gravity="center"
+            android:hint="@string/charged_credit"
+
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+
+        <com.ingic.ezgoreload.ui.views.AnyTextView
+            android:id="@+id/txt_credit_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alpha="0.8"
+            android:gravity="center"
+            android:hint="@string/credit_nleft"
+
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/x15"
+            app:typeface="Roboto-Regular.ttf" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

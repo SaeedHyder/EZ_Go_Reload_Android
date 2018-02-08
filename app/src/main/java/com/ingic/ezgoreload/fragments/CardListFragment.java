@@ -1,5 +1,7 @@
 package com.ingic.ezgoreload.fragments;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +14,7 @@ import com.ingic.ezgoreload.entities.CardEnt;
 import com.ingic.ezgoreload.fragments.abstracts.BaseFragment;
 import com.ingic.ezgoreload.helpers.UIHelper;
 import com.ingic.ezgoreload.ui.adapters.ArrayListAdapter;
+import com.ingic.ezgoreload.ui.dialogs.DialogFactory;
 import com.ingic.ezgoreload.ui.viewbinder.CardListBinder;
 import com.ingic.ezgoreload.ui.views.TitleBar;
 
@@ -20,9 +23,7 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * Created on 9/7/2017.
- */
+
 
 public class CardListFragment extends BaseFragment {
     @BindView(R.id.listView_card)
@@ -60,29 +61,43 @@ public class CardListFragment extends BaseFragment {
 
     private void bindData() {
         cardcollection = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             cardcollection.add(new CardEnt("Card - " + i, "Active"));
+            cardcollection.add(new CardEnt("Card - " + (i + 1), "Inactive"));
         }
+
         bindView(cardcollection);
     }
 
 
-    private void bindView(ArrayList<CardEnt> cardcollection) {
+    private void bindView(final ArrayList<CardEnt> cardscollection) {
         mAdapter.clearList();
         listViewCard.setAdapter(mAdapter);
-        mAdapter.addAll(cardcollection);
+        mAdapter.addAll(cardscollection);
         mAdapter.notifyDataSetChanged();
         listViewCard.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                UIHelper.showShortToastInCenter(getDockActivity(),"item long clicked");
-                return false;
+            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+                Dialog dialog = DialogFactory.createMessageDialog2(getDockActivity(), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        mAdapter.removeItemAtPosition(position);
+                    }
+                }, getString(R.string.delete_card_message), getString(R.string.delete_card), R.drawable.app_icon);
+                dialog.show();
+                return true;
             }
         });
         listViewCard.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                UIHelper.showShortToastInCenter(getDockActivity(),"item clicked");
+                Dialog dialog = DialogFactory.createMessageDialog2(getDockActivity(), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        getDockActivity().replaceDockableFragment(AddCreditsTabFragment.newInstance(true), "AddCreditsTabFragment");
+                    }
+                }, getString(R.string.edit_message), getString(R.string.edit_item_card), R.drawable.app_icon);
+                dialog.show();
             }
         });
 
@@ -97,7 +112,7 @@ public class CardListFragment extends BaseFragment {
         titleBar.showAddButton(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                UIHelper.showShortToastInCenter(getDockActivity(), "has to be implemented");
+                getDockActivity().replaceDockableFragment(AddCreditFragment.newInstance(), "AddCreditFragment");
             }
         });
         titleBar.setSubHeading(getString(R.string.card_list));

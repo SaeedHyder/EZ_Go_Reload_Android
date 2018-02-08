@@ -76,10 +76,11 @@ public class DialogFactory {
 	
 	public static Dialog createMessageDialog2( Activity activity,
 			DialogInterface.OnClickListener dialogPositive,
-			CharSequence message, String titleId ) {
+			CharSequence message, String titleId,int iconID ) {
 		AlertDialog.Builder builder = new AlertDialog.Builder( activity );
 		builder.setIcon( android.R.drawable.ic_dialog_alert )
-				.setTitle( android.R.string.dialog_alert_title )
+				.setTitle( titleId )
+				.setIcon(iconID)
 				.setMessage( message )
 				.setCancelable( true )
 				.setPositiveButton( "Yes", dialogPositive )

@@ -5,18 +5,23 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.ingic.ezgoreload.R;
 import com.ingic.ezgoreload.fragments.abstracts.BaseFragment;
 import com.ingic.ezgoreload.ui.views.TitleBar;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-/**
- * Created by saeedhyder on 9/7/2017.
- */
 
-public class PaymentOptionsFragment extends BaseFragment  {
+public class PaymentOptionsFragment extends BaseFragment {
+
+    @BindView(R.id.ll_newCard)
+    LinearLayout llNewCard;
+    @BindView(R.id.ll_replace)
+    LinearLayout llReplace;
 
     public static PaymentOptionsFragment newInstance() {
         return new PaymentOptionsFragment();
@@ -50,7 +55,22 @@ public class PaymentOptionsFragment extends BaseFragment  {
             }
         });
         titleBar.setSubHeading(getString(R.string.payment_method));
-
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+    }
+
+    @OnClick({R.id.ll_newCard, R.id.ll_replace})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.ll_newCard:
+                getDockActivity().replaceDockableFragment(AddCreditsTabFragment.newInstance(true), "AddCreditsTabFragment");
+                break;
+            case R.id.ll_replace:
+                getDockActivity().replaceDockableFragment(CardListFragment.newInstance(), "CardListFragment");
+                break;
+        }
+    }
 }
